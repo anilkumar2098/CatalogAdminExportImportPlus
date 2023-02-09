@@ -46,6 +46,7 @@ public class FileExportConsumer {
     @KafkaListener(topics = "catalog_product_grid", groupId = "group_id")
     public void consume(ExportEvent exportEvent){
         LOGGER.info(String.format("Export details received -> %s", exportEvent));
+
     }
 
 

@@ -18,6 +18,16 @@ public class Constants {
 
     public static final String CATALOG_DATE_EXCEL_FORMAT = "MMM_dd_yyyy_hh_mm_ss_a";
 
+    public static final Integer EXPORT_PAGE_SIZE = 100;
+
+    public static final String SEARCH_TYPE_LISTING = "listing";
+
+    public class USER_CONFIGURATION {
+        public static final String PRODUCT_PAGE_ID 		= "product_listing";
+    }
+
+
+
 
 
 

@@ -29,7 +29,7 @@ public class CommonUtil {
     }
 
     public static boolean isAttributeScopeGlobal(String scopeValue) {
-        return (Objects.nonNull(scopeValue) && Constants.ATTRIBUTE_SCOPE_GLOBAL.equalsIgnoreCase(scopeValue));
+        return (Objects.nonNull(scopeValue) && Constant.ATTRIBUTE_SCOPE_GLOBAL.equalsIgnoreCase(scopeValue));
     }
 
     public static Date convertStringToUtilDate(String dateInString) {
@@ -42,17 +42,17 @@ public class CommonUtil {
         if(ObjectUtils.isEmpty(dateInString))
             return null;
         if(ObjectUtils.isEmpty(dateFormat))
-            dateFormat = Constants.PRODUCT_DATE_FORMAT;
+            dateFormat = Constant.PRODUCT_DATE_FORMAT;
         LocalDateTime ldt = LocalDateTime.parse(dateInString, DateTimeFormatter.ofPattern(dateFormat)) ;
         return Date.from(ldt.atZone(ZoneOffset.UTC).toInstant());
     }
 
     public static String convertLdtToStr(LocalDateTime ldt) {
         if(ObjectUtils.isEmpty(ldt))
-            return Constants.CHARACTERS.EMPTY;
-        ZonedDateTime zonedDateTime = ldt.atZone(ZoneId.of(Constants.UTC_TIME_ZONE));
-        ldt = zonedDateTime.withZoneSameInstant(ZoneId.of(Constants.KUWAIT_ZONE)).toLocalDateTime();
-        return (ldt.format(DateTimeFormatter.ofPattern(Constants.DISPLAY_DT_FORMAT_FE)));
+            return Constant.CHARACTERS.EMPTY;
+        ZonedDateTime zonedDateTime = ldt.atZone(ZoneId.of(Constant.UTC_TIME_ZONE));
+        ldt = zonedDateTime.withZoneSameInstant(ZoneId.of(Constant.KUWAIT_ZONE)).toLocalDateTime();
+        return (ldt.format(DateTimeFormatter.ofPattern(Constant.DISPLAY_DT_FORMAT_FE)));
     }
 
     public static BigDecimal roundUptoThreePlaces(BigDecimal value){

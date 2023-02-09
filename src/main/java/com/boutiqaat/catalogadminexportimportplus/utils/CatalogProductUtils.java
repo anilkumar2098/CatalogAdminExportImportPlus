@@ -3,6 +3,9 @@ package com.boutiqaat.catalogadminexportimportplus.utils;
 import com.boutiqaat.catalogadminexportimportplus.batch.ExportWriter;
 import com.google.common.base.Ascii;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class CatalogProductUtils {
 
     public static ExportWriter exportWriter;
@@ -19,5 +22,9 @@ public class CatalogProductUtils {
         }
         String retValue = camelCaseStr.toString();
         return retValue;
+    }
+
+    public static List<String> trimElements(List<?> listValue) {
+        return listValue.stream().map(str -> ((String) str).trim()).collect(Collectors.toList());
     }
 }

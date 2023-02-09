@@ -4,6 +4,7 @@ import com.boutiqaat.catalogadminexportimportplus.entity.CatalogProductExport;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
+import org.springframework.batch.core.JobParameters;
 
 import java.util.Map;
 
@@ -15,7 +16,7 @@ import java.util.Map;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 @NoArgsConstructor
-public class ExportEvent {
+public class ExportEvent extends JobParameters {
 
     @JsonProperty("exportInfo")
     Object exportInfo;

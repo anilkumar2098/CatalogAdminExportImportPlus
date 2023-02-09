@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public final class Constants {	private Constants() {}
+public final class Constant {	private Constant() {}
 
     public static final String KUWAIT_ZONE = "Asia/Kuwait";
     public static final String FILTER_DATE_FORMAT = "YYYY-MM-dd";

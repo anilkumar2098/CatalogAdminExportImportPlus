@@ -46,10 +46,10 @@ public class Producer {
     }
 
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaTemplate<String, ExportEvent> kafkaTemplate;
 
     public void sendMessage(ExportEvent exportEvent) {
-        kafkaTemplate.send("catalog_product_grid", String.valueOf(exportEvent));
+        kafkaTemplate.send("catalog_product_grid", exportEvent);
     }
 
 
