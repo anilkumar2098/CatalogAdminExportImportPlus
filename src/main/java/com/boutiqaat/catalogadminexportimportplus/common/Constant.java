@@ -37,6 +37,9 @@ public final class Constant {	private Constant() {}
 
         public static final String EMPTY = "";
 
+        public static final String COMMA = ",";
+
+
     }
 
     public static final class NUMBERS {	private NUMBERS() {}

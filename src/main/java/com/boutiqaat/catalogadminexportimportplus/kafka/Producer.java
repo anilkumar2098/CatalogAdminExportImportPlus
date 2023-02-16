@@ -49,7 +49,7 @@ public class Producer {
     private KafkaTemplate<String, ExportEvent> kafkaTemplate;
 
     public void sendMessage(ExportEvent exportEvent) {
-        kafkaTemplate.send("catalog_product_grid", exportEvent);
+        kafkaTemplate.send(String.valueOf(KafkaTopic.CATALOG_PRODUCT_GRID), exportEvent);
     }
 
 

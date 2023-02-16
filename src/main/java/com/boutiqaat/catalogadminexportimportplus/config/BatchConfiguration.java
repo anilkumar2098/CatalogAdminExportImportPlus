@@ -55,7 +55,7 @@ public class BatchConfiguration {
                 .<String, String> chunk(4000)
                 .reader(new ExportReader())
                 .processor(new ExportProcessor())
-                .writer((ItemWriter<? super String>) new ExportWriter())
+                .writer(new ExportWriter())
                 .build();
     }
 }

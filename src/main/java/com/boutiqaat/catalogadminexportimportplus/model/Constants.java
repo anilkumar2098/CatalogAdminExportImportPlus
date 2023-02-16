@@ -22,6 +22,15 @@ public class Constants {
 
     public static final String SEARCH_TYPE_LISTING = "listing";
 
+    public static final String LEAF_CATEGORY_ID = "leaf_category_id";
+
+    public static final String ROW_ID 								= "row_id";
+
+    public static final String SELECTED = "selected";
+
+
+
+
     public class USER_CONFIGURATION {
         public static final String PRODUCT_PAGE_ID 		= "product_listing";
     }

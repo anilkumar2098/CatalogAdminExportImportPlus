@@ -1,4 +1,4 @@
-package com.boutiqaat.catalogadminexportimportplus.model;
+package com.boutiqaat.catalogadminexportimportplus.common;
 
 import java.util.HashMap;
 import java.util.HashSet;

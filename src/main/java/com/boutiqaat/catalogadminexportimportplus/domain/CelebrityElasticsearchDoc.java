@@ -1,7 +1,7 @@
 package com.boutiqaat.catalogadminexportimportplus.domain;
 
 
-import com.boutiqaat.catalogadmin.utils.MapperUtils;
+import com.boutiqaat.catalogadminexportimportplus.utils.MapperUtils;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.extern.slf4j.Slf4j;
